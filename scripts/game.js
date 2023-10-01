@@ -42,14 +42,20 @@ function StartRound(playerChoice){
     if(playerChoice==computerChoice){
         draw = true;
     }
-    //if playerChoice is rock or paper, then they lose
-    //if computerChoice is rock + 1 = paper, or paper + 1 = scissor respectively
+    /*
+        If the playerChoice is rock or paper, then they lose whenever computerChoice is
+        a 1 index higher than them. Since rock is at index 0 and paper is at index 1, paper beats rock.
+    */
+
     else if(playerChoice == arr[0] || playerChoice == arr[1]){
         computerWins = arr.indexOf(playerChoice) + 1 == arr.indexOf(computerChoice);
     }
 
-    //if playerChoice is scissor, then they lose
-    //if computerChoice is index 0
+    /*
+        However, this only applies for the first 2 items, as such if the playerChoice is the final
+        index, which is the scissors, then we do a simple comparison if the computerChoice is a rock.
+
+    */
     else if(playerChoice == arr[2])
     {
         computerWins = (arr[0] == arr.indexOf(computerChoice))
