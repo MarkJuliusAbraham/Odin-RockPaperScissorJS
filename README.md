@@ -21,46 +21,27 @@ The webpage asks using a prompt with word hinting the correct syntax to be used 
 Here is the code for determining the winner.
 
 ```
-function StartRound(playerChoice){
-
-    let computerChoice = GetComputerChoice();
-    let draw = false;
-
-    console.log("Computer's choice is: " + computerChoice);
-    console.log("Player's choice is: " +  playerChoice);
-
-
     if(playerChoice==computerChoice){
         draw = true;
     }
-    //if playerChoice is rock or paper, then they lose
-    //if computerChoice is rock + 1 = paper, or paper + 1 = scissor respectively
+    /*
+        If the playerChoice is rock or paper, then they lose whenever computerChoice is
+        a 1 index higher than them. Since rock is at index 0 and paper is at index 1, paper beats rock.
+    */
+
     else if(playerChoice == arr[0] || playerChoice == arr[1]){
         computerWins = arr.indexOf(playerChoice) + 1 == arr.indexOf(computerChoice);
     }
 
-    //if playerChoice is scissor, then they lose
-    //if computerChoice is index 0
+    /*
+        However, this only applies for the first 2 items, as such if the playerChoice is the final
+        index, which is the scissors, then we do a simple comparison if the computerChoice is a rock.
+
+    */
     else if(playerChoice == arr[2])
     {
         computerWins = (arr[0] == arr.indexOf(computerChoice))
     }
-
-    if(draw){
-        console.log("The round resulted in a draw")
-    }
-    else{
-        if(computerWins){
-            computerScore += 1;
-            console.log("The round resulted in a win for the computer.")
-        }
-        else{
-            playerScore += 1;
-            console.log("The round resulted in a win for the player.")
-        }
-    }
-    console.log("\n\tComputer: " + computerScore + "\n\tPlayer :" + playerScore)
-}
 ```
 
 ### The code above simply checks if the user's input is 1 index lower from the computer. This check happens only happens if it wasn't already a draw, thus failing this check means that the player wins without needing extra comparisons.
