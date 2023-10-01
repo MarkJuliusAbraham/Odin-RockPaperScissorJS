@@ -8,6 +8,10 @@ Here are a few screenshots:
 
 ![image](https://github.com/MarkJuliusAbraham/Odin-RockPaperScissorJS/assets/122323456/5f9a0c45-d451-4b6d-895a-f59ca8716cf0)
 
+Here is the basic prompt:
+
+![image](https://github.com/MarkJuliusAbraham/Odin-RockPaperScissorJS/assets/122323456/db6f80c2-3065-4201-94bb-8b8d51a41886)
+
 The game ends at 5 wins:
 
 ![image](https://github.com/MarkJuliusAbraham/Odin-RockPaperScissorJS/assets/122323456/710d977a-e45f-4d1c-bdca-b1c1c25335e1)
