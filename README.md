@@ -44,4 +44,4 @@ Here is the code for determining the winner.
     }
 ```
 
-### The code above simply checks if the user's input is 1 index lower from the computer. This check happens only happens if it wasn't already a draw, thus failing this check means that the player wins without needing extra comparisons.
+### The code above simply checks if the user's input is 1 index lower from the computer. This check only happens if it wasn't already a draw, thus failing this check means that the player wins without needing extra comparisons.
